@@ -1,0 +1,170 @@
+@import '../../assets/css/mixin.scss';
+
+.sPlanesList{
+    justify-content: space-between;
+    @include mediaTablet{
+        flex-direction: column;
+    }
+}
+
+.sPlanesItem{
+    background: white;
+    width: calc( 33.3% - 20px );
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background:#F4FDFF;
+    justify-content: space-between;
+    .tag{
+        background: #B2EEFF;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: #117E9C;
+        height: 40px;
+        font-weight:bold;
+        line-height: 40px;
+        padding: 0px 30px 0px 30px;
+        font-size: 16px;
+        border-radius: 0px 0px 0px 30px;
+    }
+    .title{
+        text-align: center;
+        h4{
+            font-size: 45px;
+            font-weight: 800;
+        }
+        h3{
+            font-size: 60px;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+            padding: 0px 0px 0px 40px;
+            line-height:1;
+            small{
+                font-size: 30px;
+            }
+            .pen{
+                position: absolute;
+                top: 15px;
+                left: 0px;
+                font-size:25px;
+            }
+        }
+        p{
+            margin: 0px;
+        }
+    }
+    ul{
+        padding: 0px;
+        margin: 10px 0px 20px 0px;
+        list-style: none;
+        display: inline-block;
+        li{
+            position: relative;
+            color: var(--grees);
+            padding: 3px 0px 3px 40px;
+            margin: 4px 0px 4px 0px;
+            font-size: 14px;
+            &::before{
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background: #EAFAFF;
+            }
+            &::after{
+                content: '';
+                width: 8px;
+                position: absolute;
+                top: 9px;
+                left: 9px;
+                height: 4px;
+                border-bottom: 2px solid #319BB8;
+                border-left: 2px solid #319BB8;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .btnSolid{
+        width: 100%;
+    }
+    @include mediaTablet{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+.sPlanesItem1{
+    .title{
+        h4{
+            color: #319BB8;
+        }
+    }
+    .btnSolid{
+        background: #319BB8;
+    }
+}
+
+.sPlanesItem2{
+    background: #F9FFFB;
+    .tag{
+        background: var(--green);
+        color:white;
+    }
+    .title{
+        h4{
+            color: #11C95F;
+        }
+    }
+    ul{
+        li{
+            &::before{
+                background: #EAFFEE;
+            }
+            &::after{
+                border-bottom: 2px solid #11C95F;
+                border-left: 2px solid #11C95F;
+            }
+        }
+    }
+    .btnSolid{
+        background: #11C95F;
+    }
+}
+
+.sPlanesItem3{
+    background: #FFF9FF;
+    .tag{
+        background: #FFDAFC;
+        color: #B831AF;
+    }
+    .title{
+        h4{
+            color: #B831AF;
+        }
+    }
+    ul{
+        li{
+            &::before{
+                background: #FFF2FE;
+            }
+            &::after{
+                border-bottom: 2px solid #B831AF;
+                border-left: 2px solid #B831AF;
+            }
+        }
+    }
+    .btnSolid{
+        background: #B831AF;
+    }
+}

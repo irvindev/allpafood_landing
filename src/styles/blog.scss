@@ -1,0 +1,313 @@
+@import '../assets/css/mixin.scss';
+
+.secPageBlog{
+    padding: 60px 0px 60px 0px;
+    @include mediaTablet{
+        padding: 50px 0px 50px 0px;
+    }
+    @include mediaTablet{
+        padding: 40px 0px 40px 0px;
+    }
+}
+
+
+.spBlogBox{
+    align-items: flex-start;
+    @include mediaTablet{
+        flex-direction: column-reverse;
+    }
+}
+
+.spBlogSidebar{
+    background: white;
+    border-radius: 25px;
+    width: 400px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,.07);
+    @include mediaLaptop{
+        width: 300px;
+    }
+    @include mediaTablet{
+        width: 100%;
+    }
+}
+
+.spBlogList{
+    width: calc( 100% - 400px );
+    padding: 0px 0px 0px 30px;
+
+    @include mediaLaptop{
+        width: calc( 100% - 300px );
+    }
+    @include mediaLaptop{
+        width: 100%;
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+.spBlogListBox{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.spBlogNoresult{
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,.08);
+    align-items: center;
+    justify-content: flex-start;
+    figure{
+        width: 150px;
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    .txt{
+        padding: 0px 0px 0px 20px;
+    }
+}
+
+.spbCategoriasBox{
+    margin: 0px 0px 30px 0px;
+    h3{
+        font-size: 20px;
+        position: relative;
+        padding: 0px 0px 0px 28px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 20px;
+            height: 20px;
+            background: url('../assets/img/ico_blog_start.png') center no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        li{
+            margin-bottom: 5px;
+            a,.linkCat{
+                font-weight: 400;
+                color: var(--blue);
+                font-size: 16px;
+                position: relative;
+                padding: 0px 0px 0px 20px;
+                z-index: 1;
+                //font-weight: 600;
+                cursor: pointer;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0px;
+                    top: 7px;
+                    transform: rotate(-45deg);
+                    width: 7px;
+                    height: 7px;
+                    border-right: 2px solid var(--green);
+                    border-bottom: 2px solid var(--green);
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 0px;
+                    bottom: 0px;
+                    width: 0%;
+                    height: 15px;
+                    left: 20px;
+                    background: var(--green);
+                    z-index: -1;
+                    opacity: .3;
+                    transition: all ease-in-out .3s;
+                }
+                &:hover{
+                    &:after{
+                        width:calc( 100% - 20px );
+                    }
+                }
+            }
+        }
+    }
+}
+
+.spbLeidoBox{
+    h4{
+        font-size: 20px;
+        position: relative;
+        padding: 0px 0px 0px 28px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0px;
+            width: 16px;
+            height: 18px;
+            background: url('../assets/img/ico_lomasleido.png') center no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 20px 0px 0px 0px;
+        li{
+            display: inline-block;
+            padding: 0px 0px 10px 0px;
+            margin: 0px 0px 10px 0px;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                figure{
+                    width: 80px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    img{
+                        display: block;
+                    }
+                }
+                .txt{
+                    width: calc( 100% - 80px );
+                    padding: 0px 0px 0px 15px;
+                    h5{
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    .date{
+                        font-weight: 300;
+                        font-size: 14px;
+                        padding: 0px 0px 0px 20px;
+                        color: var(--grees);
+                        margin-top: 7px;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            width: 13px;
+                            height: 13px;
+                            position: absolute;
+                            left: 0px;
+                            top: 3px;
+                            background: url('../assets/img/ico_blog_fecha.png') center no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: 0px solid rgba(0,0,0,.1);
+            }
+        }
+    }
+}
+
+.spBlogItem{
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    width: calc( 50% - 15px );
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,.07);
+    position: relative;
+    figure{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            height: 230px;
+            display: block;
+        }
+        .cat{
+            background: #43BF73;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 40px;
+            padding: 0px 30px 0px 40px;
+            color: white;
+            font-weight: 600;
+            line-height: 40px;
+            border-radius: 0px 0px 20px 0px;
+            &::before{
+                content: '';
+                width: 19px;
+                height: 19px;
+                position: absolute;
+                top: 10px;
+                left: 16px;
+                z-index: 1;
+                background: url('../assets/img/ico_blog_categoria.png') center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    h3{
+        border-bottom: 1px solid rgba(0,0,0,.15);
+        font-size: 18px;
+        padding: 10px 20px 13px 20px;
+    }
+    .txt{
+        padding: 20px 20px 20px 20px;
+        p{
+            margin: 0px;
+            color: var(--grees);
+        }
+        .date{
+            position: relative;
+            padding: 0px 0px 0px 25px;
+            color: var(--grees);
+            margin: 10px 0px 0px 0px;
+            font-size: 14px;
+            &::before{
+                content: '';
+                width: 13px;
+                height: 13px;
+                position: absolute;
+                left: 0px;
+                top: 3px;
+                background: url('../assets/img/ico_blog_fecha.png') center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    .btnMore{
+        background: var(--dark-blue);
+        color: white;
+        height: auto;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        padding: 12px 25px 12px 25px;
+        font-size: 14px;
+        border-radius: 25px 0px 0px 0px;
+        span{
+            display: inline-block;
+            padding: 0px 30px 0px 0px;
+            font-weight: 400;
+            position: relative;
+            &::before{
+                width: 19px;
+                height: 19px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                content: '';
+                background: url('../assets/img/ico_blog_arrow.png') center no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    @include mediaPhone{
+        width: 100%;
+    }
+}

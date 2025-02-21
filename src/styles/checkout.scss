@@ -1,0 +1,299 @@
+@import '../assets/css/mixin.scss';
+
+.secCheckoutpage{
+    padding: 40px 0px 100px 0px;
+}
+
+.scpBox{
+    justify-content: space-between;
+    align-items: flex-start;
+    @include mediaTablet{
+        flex-direction: column;
+    }
+}
+
+.scpPaper{
+    padding: 30px 30px 30px 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,.05);
+    border: 1px solid rgba(0,0,0,.05);
+    h3{
+        font-size: 25px;
+        position:relative;
+        margin-bottom: 15px;
+        padding: 0px 0px 0px 15px;
+        &::before{
+            width: 6px;
+            height: 100%;
+            background: var(--green);
+            content:'';
+            position: absolute;
+            top: 0px;
+            border-radius:5px;
+            left: 0px;
+        }
+    }
+}
+
+.scpResumen{
+    width: calc( 100% - 420px );
+    @include mediaLaptop{
+        width: calc( 100% - 320px );
+    }
+    @include mediaTablet{
+        width: 100%;
+    }
+}
+.scpTotal{
+    width: 400px;
+    ul{
+        list-style: none;
+        margin: 0px 0px 20px 0px;
+        padding: 0px;
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0,0,0,.07);
+            padding: 5px 0px 5px 0px;
+            span{
+                font-size: 18px;
+                color: var(--grees);
+            }
+            &:last-child{
+                border-bottom: 0px solid rgba(0,0,0,.15);
+            }
+        }
+    }
+    @include mediaLaptop{
+        width: 300px;
+    }
+    @include mediaTablet{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+.scpResumenItem{
+    //border: 1px solid rgba(0,0,0,.15);
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,.08);
+    align-items:center;
+    @include mediaTablet{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        li{
+            color: var(--grees);
+            position: relative;
+            padding: 3px 0px 3px 40px;
+            &::before{
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 2px;
+                background: #EAFFEE;
+            }
+            &::after{
+                content: '';
+                width: 8px;
+                position: absolute;
+                top: 9px;
+                left: 7px;
+                height: 4px;
+                border-bottom: 2px solid #11C95F;
+                border-left: 2px solid #11C95F;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .priceBox{
+        h4{
+            font-size: 40px;
+            font-weight: 900;
+        }
+        small{
+            text-decoration: line-through;
+        }
+        @include mediaLaptop{
+            h4{
+                font-size: 30px;
+            }
+        }
+        @include mediaTablet{
+            margin-top: 15px;
+        }
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        .icon{
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            background: #EAFFEE;
+            font-size: 100px;
+            border-radius: 50%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            color: #11C95F;
+            svg{
+                font-size: 40px;
+            }
+        }
+        @include mediaLaptop{
+            .icon{
+                width: 50px;
+                height: 50px;
+                svg{
+                    font-size: 30px;
+                }
+            }
+        }
+        @include mediaTablet{
+            margin-bottom: 15px;
+        }
+    }
+} 
+
+.textFieldReg{
+    text-align: left;
+    //margin: 3px 0px 3px 0px;
+    p{
+        color: var(--dark-blue);
+        font-weight: 600;
+        font-size: 14px;
+        margin: 0px 0px 5px 0px;
+    }
+
+    .MuiFormControl-root{
+        width: 100%;
+        .MuiInputBase-root{
+            background: white;
+            border-radius: 30px;
+            font-size: 16px;
+            font-family: var(--font1);
+            padding-left: 10px;
+            text-align: left;
+            color: var(--dark-blue);
+            fieldset{
+                border: 1px solid #C9E0CE;
+            }
+        }
+        .Mui-focused{
+            fieldset{
+                border: 1px solid var(--dark-blue) !important;
+            }
+        }
+    }
+    .Mui-error{
+        fieldset{
+            border: 1px solid red !important;
+        }
+
+    }
+}
+
+.scpForm{
+    margin-top: 20px;
+    h3{
+        margin-bottom: 40px;
+    }
+    .btnSolid,
+    .btnLoading{
+        width: 100%;
+    }
+}
+
+
+// Popup respuesta izipay
+.paymentResp{
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h3{
+        font-size: 22px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+
+
+.paymentRespClose{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--green);
+    right: -20px;
+    top: -20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    svg{
+        color: white;
+    }
+    @include mediaTablet{
+        width: 40px;
+        height: 40px;
+        top: -10px;
+        right: -10px;
+    }
+}
+
+.iconRechazo{
+    width: 150px;
+}
+
+#micuentawebstd_rest_wrapper{
+    background: white;
+    flex-direction: column;
+    width: 90%;
+    max-width: 330px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    padding: 30px 30px 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    figure{
+        margin-bottom: 25px;
+    }
+}
+
+
+
+

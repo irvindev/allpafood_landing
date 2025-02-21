@@ -1,0 +1,329 @@
+@import '../../css/mixin.scss';
+
+
+
+.headerCont{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    background: rgba(255,255,255,.7);
+    backdrop-filter: blur(100px);
+}
+
+.headerBox{
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    @include mediaLaptop{
+        height: 80px;
+    }
+    @include mediaTablet{
+        height: 70px;
+    }
+    @include mediaPhone{
+        height: 60px;
+    }
+}
+
+.headerLogo{
+    width: 219px;
+    height: auto;
+    margin-right: 80px;
+    img{
+        display: block;
+    }
+    @include mediaLaptop{
+        margin-right: 30px;
+    }
+    @include mediaTablet{
+        width: 170px;
+    }
+    @include mediaPhone{
+        width: 140px;
+        margin-right: 0px;
+    }
+}
+
+.headerLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        display: flex;
+        li{
+            padding: 0px 10px 0px 10px;
+            a{
+                padding: 0px 10px 0px 10px;
+                font-size: 18px;
+                font-weight:600;
+            }
+        }
+    }
+    @include mediaTablet{
+        ul{
+            display: none;
+        }
+    }
+}
+
+.headerCta{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnLogin{
+    background: var(--green);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    img{
+        width: 17px;
+        margin-right: 10px;
+    }
+    span{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    @include mediaTablet{
+        display: none;
+    }
+}
+
+.icoMenu{
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 10px 20px 10px 0px;
+    display: none;
+    p{
+        font-weight: 800;
+        margin: 0px;
+    }
+    span{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-right: auto;
+        width: 40px;
+        height: 4px;
+        border-radius: 7px;
+        margin: auto;
+        background: var(--green);
+        &::before,
+        &::after{
+            content: '';
+            width: 85%;
+            height: 100%;
+            border-radius: 6px;
+            background: var(--green);
+            position: absolute;
+            left: 0px;
+        }
+        &::before{
+            top: -10px;
+            right: 0px;
+        }
+        &::after{
+            right: 0px;
+            bottom: -10px;
+        }
+    }
+    @include mediaTablet{
+        display: block;
+    }
+}
+
+.menuResponsive{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255,255,255,1);
+    backdrop-filter: blur(100px);
+    left: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 30px 30px 30px;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    
+    transition: all ease-in-out .3s;
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        li{
+            margin: 5px 0px 5px 0px;
+            a{
+                text-align: center;
+                font-size: 30px;
+            }
+        }
+    }
+    .mrLogo{
+        width: 220px;
+    }
+}
+
+.menuResponsiveActive{
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.mrRedesBox{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 0px 0px;
+    h4{
+        color: var(--grees);
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.mrRedes{
+    display: flex;
+    a{
+        width: 50px;
+        height: 50px;
+        background: #E0FFDC;
+        border-radius: 50%;
+        margin: 0px 5px 0px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //border: 1px solid rgba(0,0,0,.05);
+        box-shadow: 1px 2px 5px 0px rgba(0,0,0,.1);
+        img{
+            width: auto;
+            height: 20px;
+        }
+    }
+}
+
+.btnLoginResp{
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    border-radius: 30px;
+    margin: 20px 0px 10px 0px;
+    img{
+        width: 17px;
+        margin-right: 10px;
+    }
+    span{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.mrClose{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    margin-bottom: 20px;
+    position: relative;
+    span{
+        width: 25px;
+        height: 3px;
+        border-radius: 4px;
+        background: var(--green);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        transform: rotate(45deg);
+        bottom: 0px;
+        margin: auto;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: var(--green);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.modalPlanesHome{
+    background: #e9ffff;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 1500px;
+    position: absolute;
+    top: 50%;
+    outline: none;
+    padding: 40px 20px 20px 20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .titleH4{
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+        padding: 0px 0px 20px 0px;
+        &:before{
+            content:'';
+            width: 100%;
+            max-width: 70px;
+            
+            height: 8px;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background: var(--green);
+        }
+    }
+    @include mediaTablet{
+        height: 90%;
+        overflow: auto;
+    }
+}
+
+.modalPlanesClose{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--green);
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    svg{
+        font-size: 30px;
+    }
+}

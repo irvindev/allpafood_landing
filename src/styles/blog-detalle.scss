@@ -1,0 +1,236 @@
+@import '../assets/css/mixin.scss';
+
+.sbdCont{
+
+    margin: 70px 0px 70px 0px;
+
+    .titleBox2{
+        margin-bottom: 40px;
+    }
+    @include mediaTablet{
+        margin: 50px 0px 50px 0px;
+    }
+    @include mediaPhone{
+        margin: 30px 0px 30px 0px;
+    }
+    
+}
+
+.sbdLayout{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sbdSidebar{
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,.07);
+    padding: 20px;
+    @include mediaLaptop{
+        max-width: 350px;
+    }
+    @include mediaTablet{
+        width: 100%;
+        max-width: 100%;
+        margin-top: 25px;
+        border-radius: 15px;
+        padding: 25px;
+    }
+    @include mediaPhone{
+        padding: 17px;
+    }
+}
+
+.sbdBox{
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,.07);
+    padding: 3%;
+    width: calc( 100% - 470px );
+    position: relative;
+    
+    @include mediaLaptop{
+        width: calc( 100% - 370px );
+    }
+    @include mediaLaptop{
+        width: 100%;
+        border-radius: 15px;
+        padding: 25px;
+    }
+    @include mediaPhone{
+        padding: 15px;
+    }
+}
+
+.sbdImg{
+    width: 100%;
+    margin: 30px 0px 0px 0px;
+    img{
+        object-fit: cover;
+        width: 100%;
+        display: block;
+        height: auto;
+        border-radius: 30px;
+        overflow: hidden;
+        max-height: 400px;
+    }
+}
+
+.sbdBoxDet{
+    margin-top: 20px;
+}
+
+.sbdFecha{
+    font-weight: bold;
+    color: var(--grees);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding: 10px 0px 10px 0px;
+    small{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            margin-right: 10px;
+            font-size: 16px;
+        }
+    }
+}
+
+.sbdBoxIntro{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.btnVolver{
+    margin-bottom: 10px;
+    width: 120px;
+    max-width: 120px;
+    height: 35px;
+    line-height: 35px;
+    min-width: 120px;
+    position: absolute;
+    border-radius: 20px 0px 20px 0px;
+    left: 0px;
+    top: 0px;
+    padding-left: 40px;
+    span{
+        &::before{
+            right: auto;
+            left: -15px;
+            border-right: 0px solid white;
+            border-top: 0px solid white;
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+        }
+    }
+}
+
+.titleBlog{
+    h5{
+        color: var(--grees);
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    @include mediaLaptop{
+        h1{
+            font-size: 35px;
+        }
+    }
+    @include mediaTablet{
+        h1{
+            font-size: 30px;
+        }
+    }
+    @include mediaPhone{
+        h1{
+            font-size: 22px;
+        }
+    }
+}
+
+
+.sbdSidebarLeido{
+    h4{
+        font-size: 20px;
+        position: relative;
+        padding: 0px 0px 0px 28px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0px;
+            width: 16px;
+            height: 18px;
+            background: url('../assets/img/ico_lomasleido.png') center no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 20px 0px 0px 0px;
+        li{
+            display: inline-block;
+            padding: 0px 0px 10px 0px;
+            margin: 0px 0px 10px 0px;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                figure{
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    img{
+                        display: block;
+                        width: 80px;
+                        height: 80px;
+                        object-fit: cover;
+                    }
+                }
+                .txt{
+                    width: calc( 100% - 80px );
+                    padding: 0px 0px 0px 15px;
+                    h5{
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    .date{
+                        font-weight: 300;
+                        font-size: 14px;
+                        padding: 0px 0px 0px 20px;
+                        color: var(--grees);
+                        margin-top: 7px;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            width: 13px;
+                            height: 13px;
+                            position: absolute;
+                            left: 0px;
+                            top: 3px;
+                            background: url('../assets/img/ico_blog_fecha.png') center no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: 0px solid rgba(0,0,0,.1);
+            }
+        }
+    }
+}

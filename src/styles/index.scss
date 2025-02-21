@@ -1,0 +1,533 @@
+@import '../assets/css/mixin.scss';
+
+// Intro
+.introBox{
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px 80px 0px;
+    @include mediaLaptop{
+        padding: 70px 0px 70px 0px;
+    }
+    @include mediaTablet{
+        padding: 60px 0px 60px 0px;
+        flex-direction: column;
+    }
+    @include mediaPhone{
+        padding: 40px 0px 40px 0px;
+    }
+}
+
+.titleBox1{
+    width: 50%;
+    padding: 40px 5% 0px 0px;
+    position: relative;
+    &:before,
+    &:after{
+        content: '';
+        width: 70px;
+        height: 14px;
+        background: var(--green);
+        position: absolute;
+        border-radius: 10px;
+        top: 0px;
+        left: 0px;
+    }
+    &::after{
+        width: 14px;
+        left: 80px;
+    }
+
+    h1{
+        font-size: 60px;
+        line-height: 1;
+        position: relative;
+
+        display: inline-block;
+
+    }
+    p{
+        font-size:20px;
+        display: inline-block;
+        margin: 25px 0px 30px 0px;
+        position: relative;
+
+
+    }
+    @include mediaLaptop{
+        h1{
+            font-size: 50px;
+        }
+    }
+    @include mediaTablet{
+        width: 100%;
+        text-align: center;
+        padding: 0px 5% 0px 5%;
+        h1{
+            font-size: 40px;
+            padding: 0px 0px 30px 0px;
+            margin: 0px 0px 10px 0px;
+            &:before,
+            &:after{
+                left: 0px;
+                right: 0px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 8px;
+            }
+            &::after{
+                display: none;
+            }
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    @include mediaPhone{
+        padding: 0px 3% 0px 3%;
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+
+.introImg{
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    .plato1{
+        width: 600px;
+        position: relative;
+        z-index: 1;
+    }
+    .plato2,.plato3{
+        position: absolute;
+        bottom: 0px;
+        
+    }
+    .plato2{
+        width: 400px;
+        left: 0px;
+    }
+    .plato3{
+        width: 400px;
+        right: 0px;
+    }
+    @include mediaLaptop{
+        .plato2{
+            left: -8%;
+        }
+        .plato3{
+            right: -8%;
+        }
+    }
+    @include mediaTablet{
+        width: 100%;
+        .plato1{
+            z-index: 1;
+        }
+        .plato2{
+            width: 50%;
+            left: 0px;
+            z-index: 2;
+        }
+        .plato3{
+            width: 50%;
+            right: 0px;
+            z-index: 3;
+        }
+    }
+}
+
+
+
+
+
+// Beneficios
+.secBeneficios{
+    padding: 50px 0px 100px 0px;
+    @include mediaTablet{
+        padding: 40px 0px 40px 0px;
+    }
+    @include mediaPhone{
+        padding: 30px 0px 30px 0px;
+    }
+
+}
+
+.sBeneficiosList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.secBeneficiosItem{
+    background: rgba(255,255,255,.7);
+    backdrop-filter: blur(100px);
+    width: calc( 25% - 15px );
+    border-radius: 30px;
+    padding: 25px 25px 25px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    flex-direction: column;
+    overflow:hidden;
+    .num{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: #DEB544;
+        height: 60px;
+        z-index: 1;
+        width: 70px;
+        font-size:24px;
+        font-weight:700;
+        line-height: 60px;
+        text-align: center;
+        color: white;
+        border-radius: 0px 0px 30px 0px;
+    }
+    figure{
+        margin-bottom: 15px;
+        img{
+            width: auto;
+            height: 180px;
+        }
+    }
+    .txt{
+        text-align: center;
+        h3{
+            font-size: 22px;
+            position:relative;
+            padding: 0px 0px 20px 0px;
+            margin: 0px 0px 10px 0px;
+            &:before{
+                content: '';
+                border-radius:7px;
+                width: 40px;
+                height: 7px;
+                background: var(--green);
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                margin-left: auto;
+                margin-right: auto;
+                bottom: 0px;
+            }
+        }
+        p{
+            font-size:16px;
+            color: var(--grees);
+        }
+    }
+    @include mediaLaptop{
+        padding: 20px 20px 20px 20px;
+        figure{
+            img{
+                height: 130px;
+            }
+        }
+        .num{
+            height: 50px;
+            line-height: 50px;
+        }
+        .txt{
+            h3{
+                font-size: 20px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+    @include mediaTablet{
+        width: calc( 50% - 10px );
+    }
+    @include mediaPhone{
+        width: 100%;
+    }
+}
+
+.secBeneficiosItem{
+    &:nth-child(2){
+        margin-top: -40px;
+    }
+    &:nth-child(3){
+        margin-top: -80px;
+    }
+    &:nth-child(4){
+        margin-top: -120px;
+    }
+    @include mediaTablet{
+        margin-bottom: 25px;
+        &:nth-child(2){
+            margin-top: 0px;
+        }
+        &:nth-child(3){
+            margin-top: 0px;
+        }
+        &:nth-child(4){
+            margin-top: 0px;
+        }
+    }
+}
+
+
+// Planes
+.secPlanes{
+    padding: 0px 0px 50px 0px;
+    @include mediaPhone{
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+
+
+
+// Menu
+.secMenu{
+    padding: 50px 0px 50px 0px;
+}
+
+.sMenuSwiper {
+    overflow: visible !important;
+    .swiper-wrapper{
+        overflow: visible !important;
+    }
+    .swiper-pagination{
+        position: relative;
+        margin: 30px 0px 0px 0px;
+        transform: none;
+        .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+            transition: all .3s;
+        }
+        .swiper-pagination-bullet-active{
+            width: 35px;
+            background: #315767;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+
+
+
+// Allpafood
+.secAllpafood{
+    padding: 50px 0px 0px 0px;
+
+    @include mediaTablet{
+        padding: 30px 0px 0px 0px;
+        .titleBox2{
+            margin-bottom: 50px;
+        }
+    }
+    @include mediaPhone{
+        padding: 20px 0px 0px 0px;
+        .titleBox2{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.sAllpafoodBox{
+    justify-content: space-between;
+    align-items: end;
+    @include mediaPhone{
+        flex-direction: column;
+    }
+}
+
+.sAllpafoodImg{
+    width: 700px;
+    img{
+        display: block;
+    }
+    @include mediaPhone{
+        width: 250px;
+    }
+}
+
+.sAllpafoodAcordion{
+    box-sizing: border-box;
+    padding-right: 5%;
+    padding-bottom: 30px;
+    @include mediaPhone{
+        padding-right: 0%;
+        padding-bottom: 0px;
+    }
+    .MuiPaper-root{
+        border-radius: 25px;
+        background: rgba(255,255,255,.7);
+        box-shadow:none;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 30px 0px rgba(0,0,0,.07);
+        &:before{
+            display:none;
+        }
+        .MuiButtonBase-root{
+            padding: 0px 0px 0px 20px;
+            flex-direction: row-reverse;
+        }
+        .MuiAccordionSummary-content{
+            margin: 0px;
+            color: var(--dark-blue);
+            font-size: 22px;
+            padding: 20px 20px 20px 15px;
+            font-weight: 600;
+            @include mediaPhone{
+                padding: 10px 20px 10px 15px;
+                font-size: 18px;
+            }
+
+        }
+        .MuiAccordionSummary-expandIconWrapper{
+            background: #E5FAD7;
+            border-radius: 50%;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            svg{
+                color: #52AC78;
+            }
+        }
+        .MuiAccordionDetails-root{
+            padding: 30px 30px 30px 30px;
+            p{
+                margin: 0px;
+                color: var(--grees);
+                font-size: 18px;
+            }
+            @include mediaPhone{
+                padding: 20px 30px 30px 30px;
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .Mui-expanded{
+        .MuiButtonBase-root{
+            border-bottom: 1px solid rgba(0,0,0,.1);
+        }
+    }
+}
+
+
+// Testimoniales
+.secTestimonial{
+    background: #FCFFEE;
+    padding: 50px 0px 50px 0px;
+    .titleBox2{
+        margin: 0px 0px 50px 0px;
+    }
+    @include mediaTablet{
+        padding: 40px 0px 40px 0px;
+        .titleBox2{
+            margin: 0px 0px 40px 0px;
+        }
+    }
+    @include mediaPhone{
+        padding: 35px 0px 35px 0px;
+        .titleBox2{
+            margin: 0px 0px 30px 0px;
+        }
+    }
+}
+
+.sTestList{
+    justify-content: space-between;
+    @include mediaPhone{
+        flex-direction: column;
+    }
+}
+
+.sTestItem{
+    background: white;
+    border-radius: 25px;
+    width: calc( 33.3% - 15px );
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.07);
+    figure{
+        width: 80px;
+    }
+    .txt{
+        width: calc( 100% - 80px );
+        padding: 0px 0px 0px 20px;
+        .startBox{
+            margin: 5px 0px 3px 0px;
+            img{
+                width: 20px;
+                margin-right: 3px;
+            }
+        }
+        h4{
+            font-size: 22px;
+        }
+        p{
+            color: var(--grees);
+            margin: 0px;
+            font-size: 14px;
+        }
+    }
+    @include mediaLaptop{
+        align-items: center;
+        justify-content: center;
+        figure{
+            margin-bottom: 10px;
+        }
+        .txt{
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+        }
+    }
+    @include mediaPhone{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+
+.loadingIsotipo{
+    svg{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.loadingIsotipoPath {
+    stroke-dasharray: 700px;
+    stroke-dashoffset: 700px;
+    animation: dash 1s linear alternate infinite;
+    stroke-width: 1px;
+    paint-order: stroke;
+    stroke-linejoin: round;
+    path{
+        fill: white !important;
+    }
+  }
+  
+@keyframes dash {
+    from {
+        stroke-dashoffset: -750;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}

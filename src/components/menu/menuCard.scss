@@ -1,0 +1,90 @@
+.sMenuItem{
+    background: white;
+    border-radius: 30px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    h4{
+        font-size: 22px;
+    }
+    p{
+        margin: 0px;
+        font-size: 14px;
+        color: var(--grees);
+    }
+    figure{
+        position: relative;
+        margin: 20px 0px 0px 0px;
+        img{
+            width: 270px;
+            height: auto;
+            display: block;
+            transform: scale(1.2);
+        }
+        .sMenuInfoLbl{
+            position: absolute;
+            border-radius: 12px;
+            text-align: center;
+            padding: 10px 10px 10px 10px;
+            display: flex;
+            flex-direction: column;
+            p{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 1;
+                display: inline-block;
+            }
+            small{
+                font-size: 10px;
+                display: inline-block;
+                line-height: 1;
+            }
+        }
+        .calorias{
+            left: -30px;
+            top: 30px;
+            background: #FFF2ED;
+            p{
+                color: #BB6B4C;
+            }
+            small{
+                color: #BB6B4C;
+            }
+        }
+        .carbo{
+            right: -30px;
+            top: 40px;
+            background: #E3FCFF;
+            p{
+                color: #3F8188;
+            }
+            small{
+                color: #3F8188;
+            }
+        }
+        .grasas{
+            bottom: 40px;
+            left: -30px;
+            background: #FFFBDB;
+            p{
+                color: #AA9600;
+            }
+            small{
+                color: #AA9600;
+            }
+        }
+        .prote{
+            bottom: 40px;
+            right: -30px;
+            background: #EDFFEE;
+            p{
+                color: #2F7233;
+            }
+            small{
+                color: #2F7233;
+            }
+        }
+    }
+
+}

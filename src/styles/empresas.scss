@@ -1,0 +1,287 @@
+@import '../assets/css/mixin.scss';
+
+
+
+// Intro
+.introEmpresaBox{
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px 80px 0px;
+    @include mediaLaptop{
+        padding: 70px 0px 70px 0px;
+    }
+    @include mediaTablet{
+        padding: 60px 0px 60px 0px;
+        flex-direction: column;
+    }
+    @include mediaPhone{
+        padding: 40px 0px 40px 0px;
+    }
+}
+
+.titleBoxEmpresa{
+    width: 50%;
+    padding: 0px 5% 0px 0px;
+    h1{
+        font-size: 60px;
+        line-height: 1;
+        position: relative;
+        padding: 0px 0px 50px 0px;
+        margin: 0px 0px 30px 0px;
+        display: inline-block;
+        &:before,
+        &:after{
+            content: '';
+            width: 70px;
+            height: 14px;
+            background: var(--green);
+            position: absolute;
+            border-radius: 10px;
+            bottom:0px;
+            left: 0px;
+        }
+        &::after{
+            width: 14px;
+            left: 80px;
+        }
+    }
+    p{
+        font-size:20px;
+        display: inline-block;
+        margin: 10px 0px 30px 0px;
+    }
+    @include mediaLaptop{
+        h1{
+            font-size: 50px;
+        }
+    }
+    @include mediaTablet{
+        width: 100%;
+        text-align: center;
+        padding: 0px 5% 0px 5%;
+        h1{
+            font-size: 40px;
+            padding: 0px 0px 30px 0px;
+            margin: 0px 0px 10px 0px;
+            &:before,
+            &:after{
+                left: 0px;
+                right: 0px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 8px;
+            }
+            &::after{
+                display: none;
+            }
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    @include mediaPhone{
+        padding: 0px 3% 0px 3%;
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+
+.introEmpresaImg{
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    @include mediaPhone{
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+.introEmpresaImg2{
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    .plato1{
+        width: 600px;
+        position: relative;
+        z-index: 1;
+    }
+    .plato2,.plato3{
+        position: absolute;
+        bottom: 0px;
+        
+    }
+    .plato2{
+        width: 400px;
+        left: 0px;
+    }
+    .plato3{
+        width: 400px;
+        right: 0px;
+    }
+    @include mediaLaptop{
+        .plato2{
+            left: -8%;
+        }
+        .plato3{
+            right: -8%;
+        }
+    }
+    @include mediaTablet{
+        width: 100%;
+        .plato1{
+            z-index: 1;
+        }
+        .plato2{
+            width: 50%;
+            left: 0px;
+            z-index: 2;
+        }
+        .plato3{
+            width: 50%;
+            right: 0px;
+            z-index: 3;
+        }
+    }
+}
+
+
+
+// Planes
+.pEmpPlanes{
+    padding: 70px 0px 70px 0px;
+    @include mediaTablet{
+        padding: 50px 0px 50px 0px;
+    }
+    @include mediaTablet{
+        padding: 30px 0px 30px 0px;
+    }
+}
+
+.pEmpPlanesList{
+    display: flex;
+    ul{
+        width: 300px;
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        li{
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 25px;
+            box-shadow: 0px 0px 30px 0px rgba(0,0,0,.05);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            img{
+                width: auto;
+                height: 50px;
+            }
+            .txt{
+                padding: 0px 0px 0px 20px;
+                h3{
+                    font-weight: 900;
+                }
+                small{
+                    font-size: 14px;
+                    color: var(--grees);
+                }
+            }
+        }
+    }
+    .imgBox{
+        width: calc( 100% - 300px );
+        padding: 0px 0px 0px 30px;
+        
+        overflow: hidden;
+
+        figure{
+            width: 100%;
+            box-shadow: 0px 0px 30px 0px rgba(0,0,0,.05);
+            border-radius: 25px;
+            overflow: hidden;
+            img{
+                display: block;
+            }
+        }
+    }
+    @include mediaTablet{
+        flex-direction: column;
+        ul{
+            width: 100%;
+            li{
+                margin-bottom: 15px;
+            }
+        }
+        .imgBox{
+            width: 100%;
+            padding: 0px;
+        }
+    }
+}
+
+// Filosofia
+.pEmpFilosofia{
+    padding: 70px 0px 70px 0px;
+    @include mediaTablet{
+        padding: 50px 0px 50px 0px;
+    }
+    @include mediaPhone{
+        padding: 30px 0px 30px 0px;
+    }
+}
+
+.pEmpFilosofiaList{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pEmpFilosofiaItem{
+    background: white;
+    width: calc( 25% - 15px );
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.05);
+    figure{
+        width: 150px;
+        height: 150px;
+        background: #D9D9D9;
+        border-radius: 50%;
+        margin-top: -70px;
+    }
+    .txt{
+        text-align: center;
+        h4{
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+        p{
+            margin: 0px;
+            color: var(--grees);
+            font-size: 14px;
+        }
+    }
+    @include mediaTablet{
+        width: calc( 50% - 15px );
+        margin-bottom: 40px;
+    }
+    @include mediaPhone{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}

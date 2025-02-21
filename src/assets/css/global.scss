@@ -1,0 +1,420 @@
+@import './mixin.scss';
+@import './var.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--font1);
+    color: var(--dark-blue);
+    background-color: #FCFFEE;
+    figure{
+        position: relative;
+        margin: 0px;
+        display: inline-block;
+    }
+    h1,h2,h3,h4,h5,h6{
+        color: var(--dark-blue);
+        line-height: 1.2;
+        margin: 0px;
+    }
+    h1{
+        font-size: 44px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    h3{
+        font-size: 33px;
+    }
+    h4{
+        font-size: 28;
+    }
+    h5{
+        font-size: 26;
+    }
+    h5{
+        font-size: 24px;
+    }
+    p{
+        font-size: 16px;
+        color: var(--dark-blue);
+        font-family: var(--font2);
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    a{
+        text-decoration: none;
+    }
+    a,
+    button{
+        font-family: var(--font1);
+        font-weight: bold;
+        color: var(--dark-blue);
+    }
+}
+
+.MuiContainer-root{
+    max-width: 1550px !important;
+    @include madiaPcsmall {
+        max-width: 1500px !important;
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+}
+
+// Int
+main{
+    overflow: hidden;
+    width: 100%;
+    display: block;
+}
+
+.pageTop{
+    padding-top: 100px;
+    @include mediaLaptop{
+        padding-top: 80px;
+    }
+    @include mediaTablet{
+        padding-top: 70px;
+    }
+    @include mediaPhone{
+        padding-top: 60px;
+    }
+}
+
+// Secciones
+.secBox{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+// Blocks
+.inlineBlock{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.inlineFlex{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+// Botones
+.btnSolid{
+    height: 50px;
+    padding: 0px 30px 0px 30px;
+    background: var(--green);
+    cursor: pointer;
+    border-radius: 25px;
+    line-height: 50px;
+    border: none;
+    min-width: 220px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size:16px;
+    span{
+        display: inline-block;
+        padding: 0px 15px 0px 0px;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            right: 0px;
+            transform: rotate(45deg);
+            top: 0px;
+            bottom: 0px;
+            margin-top: auto;
+            margin-bottom: auto;
+            border-top: 2px solid white;
+            border-right: 2px solid white;
+
+        }
+    }
+}
+
+.btnLoading{
+    height: 50px;
+    padding: 0px 30px 0px 30px;
+    background: var(--green);
+    cursor: pointer;
+    border-radius: 25px;
+    line-height: 50px;
+    border: none;
+    min-width: 220px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size:16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        width: 20px;
+        height: 20px;
+        svg{
+            color: white;
+        }
+    }
+}
+
+.btnGreen{
+    background: var(--green);
+    padding: 20px 60px 20px 40px;
+    border-radius: 30px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    &:before{
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid white;
+        border-right: 2px solid white;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        right: 30px;
+        transform: rotate(45deg);
+    }
+}
+
+
+
+// Detalle
+.detalleAllpaBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        z-index: 2;
+        //backdrop-filter: blur(100px);
+        left: 0px;
+        background: rgba(255,255,255,.5);
+    }
+}
+
+.detalleAllpa{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    z-index: 1;
+    left: -30%;
+    top: 0%;
+    background: radial-gradient(ellipse at center, rgba(71,252,231,1) 0%,rgba(185,254,235,0) 63%,rgba(252,255,238,0) 100%);
+}
+
+.detalleAllpa2{
+    left: 0%;
+    top: 50%;
+    background: radial-gradient(ellipse at center,  rgba(225,252,71,1) 0%,rgba(242,254,176,0) 63%,rgba(252,255,238,0) 100%);
+}
+
+.detalleAllpa3{
+    left: auto;
+    right: -15%;
+    top: 10%;
+    background: radial-gradient(ellipse at center,  rgba(71,198,252,1) 0%,rgba(185,234,243,0) 63%,rgba(252,255,238,0) 100%);
+}
+
+.detalleAllpa4{
+    left: auto;
+    right: 20%;
+    top: 10%;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(ellipse at center,  rgba(71,252,110,1) 0%,rgba(185,254,191,0) 63%,rgba(252,255,238,0) 100%);
+}
+
+.detalleAllpa5{
+    left: auto;
+    right: -10%;
+    top: -60%;
+    background: radial-gradient(ellipse at center, rgba(71,252,231,1) 0%,rgba(185,254,235,0) 63%,rgba(252,255,238,0) 100%);
+}
+
+// Titulos
+.titleBox2{
+    position: relative;
+    padding: 0px 0px 0px 25px;
+    margin: 0px 0px 70px 0px;
+    display: inline-block;
+    h1,h2{
+        font-size: 35px;
+        strong{
+            font-weight: 800;
+        }
+    }
+    p{
+        margin: 10px 0px 0px 0px;
+    }
+    &::before{
+        content: '';
+        width: 8px;
+        border-radius: 6px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 3px;
+        background: var(--green);
+    }
+    @include mediaPhone{
+        margin: 0px 0px 40px 0px;
+        h1,h2{
+            font-size: 25px;
+        }
+    }
+}
+
+
+/* Prevent scrollbar during animation */
+.effect-1,
+.effect-2,
+.effect-3 {
+  overflow: hidden;
+}
+
+.effect-3 {
+  z-index: 1;
+}
+
+.effect-3::after {
+  content: "";
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    hsla(0, 100%, 76%, 1) 0%,
+    hsla(237, 100%, 73%, 1) 100%
+  );
+  z-index: -1;
+}
+
+.campTxt{
+    h1,h2,h3,h4,h5,h6{
+        margin-bottom: 20px;
+    }
+    h1{
+        font-size: 45px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 25px;
+    }
+    h5{
+        font-size: 22px;
+    }
+    h6{
+        font-size: 20px;
+    }
+    p{
+        color: var(--grees);
+    }
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px 0px 0px 10px;
+        li{
+            color: var(--grees);
+            margin-bottom: 10px;
+            padding: 0px 0px 0px 20px;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 8px;
+                width: 7px;
+                height: 7px;
+                border-right: 2px solid var(--green);
+                border-bottom: 2px solid var(--green);
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    @include mediaTablet{
+        h1{
+            font-size: 40px;
+        }
+        h2{
+            font-size: 32px;
+        }
+        h3{
+            font-size: 28px;
+        }
+        h4{
+            font-size: 24px;
+        }
+        h5{
+            font-size: 20px;
+        }
+        h6{
+            font-size: 18px;
+        }
+    }
+    @include mediaPhone{
+        h1{
+            font-size: 30px;
+        }
+        h2{
+            font-size: 26px;
+        }
+        h3{
+            font-size: 22px;
+        }
+        h4{
+            font-size: 20px;
+        }
+        h5{
+            font-size: 18px;
+        }
+        h6{
+            font-size: 17px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
